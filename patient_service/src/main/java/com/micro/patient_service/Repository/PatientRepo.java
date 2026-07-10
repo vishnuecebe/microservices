@@ -11,5 +11,6 @@ import com.micro.patient_service.model.Patient;
 public interface PatientRepo extends JpaRepository<Patient,UUID> {
 
     boolean existsByEmailIgnoreCase(String email);
+    boolean existsByEmailAndIdNot(String email,UUID id);
     
 }
